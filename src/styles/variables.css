@@ -1,0 +1,32 @@
+:root {
+  /* FONTS */
+  --font-family-mono: "Space Mono", monospace;
+  --font-family-sans: "Open Sans", sans-serif;
+
+  /* TEXT SIZES */
+  --text-xm: 0.7rem; /* 0.6 */
+  --text-sm: 0.8rem; /* 0.75 */
+  --text-md: 1rem; /* 0.813 */
+  --text-lg: 1.3rem; /* 1.125 */
+  --text-xl: 1.7rem; /* 1.5 */
+
+  /* COLORS */
+  --primary-300: #113a40;
+  --primary-400: #0d2b2f;
+  --primary-500: #081b1e;
+  --primary-600: #061517;
+
+  --secondary-500: #d2d7e3;
+  --secondary-600: #9da8c2;
+
+  --accent-500: #50edff;
+
+  /* SHADOWS */
+  --shadow-normal: 0 0 30px -10px var(--primary-600);
+
+  /* BORDER RADIUS */
+  --border-radius-sm: 4px;
+
+  /* GLOW */
+  --text-shadow-glow: 0 0 15px var(--accent-500);
+}
