@@ -4,11 +4,11 @@
   --font-family-sans: "Open Sans", sans-serif;
 
   /* TEXT SIZES */
-  --text-xm: 0.7rem; /* 0.6 */
-  --text-sm: 0.8rem; /* 0.75 */
-  --text-md: 1rem; /* 0.813 */
-  --text-lg: 1.3rem; /* 1.125 */
-  --text-xl: 1.7rem; /* 1.5 */
+  --text-xs: 0.8rem;
+  --text-sm: 0.8rem;
+  --text-md: 1rem;
+  --text-lg: 1.3rem;
+  --text-xl: 1.7rem;
 
   /* COLORS */
   --primary-300: #113a40;
@@ -19,7 +19,11 @@
   --secondary-500: #d2d7e3;
   --secondary-600: #9da8c2;
 
-  --accent-500: #50edff;
+  --accent-500: #50eeff;
+  --accent-500-idle: #50eeff09;
+  --accent-500-hover: #50eeff1c;
+
+  --transparent-black: #00000033;
 
   /* SHADOWS */
   --shadow-normal: 0 0 30px -10px var(--primary-600);
@@ -29,4 +33,15 @@
 
   /* GLOW */
   --text-shadow-glow: 0 0 15px var(--accent-500);
+}
+
+@media (min-width: 768px) {
+  :root {
+    /* TEXT SIZES */
+    --text-xs: 0.9rem;
+    --text-sm: 1rem;
+    --text-md: 1.1rem;
+    --text-lg: 1.8rem;
+    --text-xl: 2.4rem;
+  }
 }
