@@ -5,7 +5,7 @@ const Button = styled.button`
     font-size: var(--text-xs);
     font-weight: 600;
     background-color: var(--accent-500-idle);
-    padding: 0.8rem 1.7rem;
+    padding: 0.6rem 1.7rem;
     color: var(--accent-500);
     border: 2px solid var(--accent-500);
     border-radius: var(--border-radius-sm);
@@ -21,11 +21,6 @@ const Button = styled.button`
 
     &:focus {
         background-color: var(--accent-500-hover);
-    }
-
-    @media (min-width: 1024px) {
-        padding: 0.6rem 1.7rem;
-        font-size: var(--text-xs);
     }
 `;
 
