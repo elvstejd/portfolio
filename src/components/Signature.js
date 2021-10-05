@@ -7,7 +7,7 @@ const Container = styled.div`
     justify-content: center;
 `;
 
-const P = styled.p`
+const Link = styled.a`
     font-size: var(--text-sm);
     color: var(--secondary-600);
     width: 60%;
@@ -27,7 +27,7 @@ const P = styled.p`
 function Signature() {
     return (
         <Container>
-            <P>Designed + Built By <span>Elvis Tejeda</span></P>
+            <Link href="https://github.com/elvstejd/portfolio" target="_blank"><span>Designed + Built By <span>Elvis Tejeda</span></span></Link>
         </Container>
     )
 }
