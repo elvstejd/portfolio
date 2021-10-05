@@ -2,6 +2,10 @@ import styled from "styled-components";
 import { CardContainer } from "../styles/shared/CardContainer";
 import { UilFolder, UilGithubAlt, UilExternalLinkAlt } from '@iconscout/react-unicons';
 
+const ProjectContainer = styled(CardContainer)`
+    margin-bottom: 2rem;
+`;
+
 const ProjectTopBar = styled.div`
     background-color: var(--primary-300);
     display: flex;
@@ -30,18 +34,29 @@ const ExternalButtonsContainer = styled.div`
     align-items: center;
 `;
 
-const ExternalButton = styled.a`
+const ExternalLink = styled.a`
     margin-left: 1rem;
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color:inherit;
     svg {
         width: 1.3rem;
         height: 1.3rem;
     }
+
+    transition: color .2s ease;
+
+    &:hover {
+        color: var(--secondary-500);
+    }
 `;
 
-const ImageContainer = styled.div`
-    min-height: 12rem;
+const Image = styled.img`
+    max-height: 12rem;
+    width: 100%;
+    object-fit: cover;
+    margin: auto;
 `;
 
 const ProjectDescription = styled.p`
@@ -54,30 +69,28 @@ const ProjectDescription = styled.p`
 `;
 
 
-function ProjectCard({ name, description, imageUrl, githubLink, liveLink }) {
+function ProjectCard({ name, description, imageUrl, githubLink, liveSiteLink }) {
     return (
-        <CardContainer>
+        <ProjectContainer>
             <ProjectTopBar>
                 <ProjectName>
                     <UilFolder />
                     <span>{name}</span>
                 </ProjectName>
                 <ExternalButtonsContainer>
-                    <ExternalButton href={githubLink}>
+                    <ExternalLink href={githubLink}>
                         <UilGithubAlt />
-                    </ExternalButton>
-                    <ExternalButton href={liveLink}>
+                    </ExternalLink>
+                    <ExternalLink href={liveSiteLink}>
                         <UilExternalLinkAlt />
-                    </ExternalButton>
+                    </ExternalLink>
                 </ExternalButtonsContainer>
             </ProjectTopBar>
-            <ImageContainer>
-                <img src={imageUrl} alt="hi" />
-            </ImageContainer>
+            <Image src={imageUrl} alt="hi" />
             <ProjectDescription>
                 {description}
             </ProjectDescription>
-        </CardContainer>
+        </ProjectContainer>
     )
 }
 
