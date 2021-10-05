@@ -2,9 +2,6 @@ import styled from "styled-components";
 import { CardContainer } from "../styles/shared/CardContainer";
 import { UilFolder, UilGithubAlt, UilExternalLinkAlt } from '@iconscout/react-unicons';
 
-const ProjectContainer = styled(CardContainer)`
-    margin-bottom: 2rem;
-`;
 
 const ProjectTopBar = styled.div`
     background-color: var(--primary-300);
@@ -71,7 +68,7 @@ const ProjectDescription = styled.p`
 
 function ProjectCard({ name, description, imageUrl, githubLink, liveSiteLink }) {
     return (
-        <ProjectContainer>
+        <CardContainer>
             <ProjectTopBar>
                 <ProjectName>
                     <UilFolder />
@@ -90,7 +87,7 @@ function ProjectCard({ name, description, imageUrl, githubLink, liveSiteLink }) 
             <ProjectDescription>
                 {description}
             </ProjectDescription>
-        </ProjectContainer>
+        </CardContainer>
     )
 }
 

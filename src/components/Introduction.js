@@ -3,7 +3,6 @@ import { UilGithub, UilAt } from '@iconscout/react-unicons';
 
 const HiText = styled.div`
     margin-top: 3rem;
-    margin-bottom: 0.5rem;
     font-size: var(--text-sm);
     font-weight: bold;
     color: var(--accent-500);

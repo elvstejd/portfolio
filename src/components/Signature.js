@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
+    margin-top: 5rem;
     padding-bottom: 3rem;
     display: flex;
     justify-content: center;
 `;
 
 const P = styled.p`
-    font-size: var(--text-md);
+    font-size: var(--text-sm);
     color: var(--secondary-600);
     width: 60%;
     text-align: center;
