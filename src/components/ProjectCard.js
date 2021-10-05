@@ -31,7 +31,7 @@ const ExternalButtonsContainer = styled.div`
     align-items: center;
 `;
 
-const ExternalLink = styled.a`
+const ExternalLink = styled.a.attrs({ target: '_blank' })`
     margin-left: 1rem;
     display: flex;
     align-items: center;
@@ -66,7 +66,7 @@ const ProjectDescription = styled.p`
 `;
 
 
-function ProjectCard({ name, description, imageUrl, githubLink, liveSiteLink }) {
+function ProjectCard({ name, description, image, github, live }) {
     return (
         <CardContainer>
             <ProjectTopBar>
@@ -75,15 +75,15 @@ function ProjectCard({ name, description, imageUrl, githubLink, liveSiteLink }) 
                     <span>{name}</span>
                 </ProjectName>
                 <ExternalButtonsContainer>
-                    <ExternalLink href={githubLink}>
+                    <ExternalLink href={github}>
                         <UilGithubAlt />
                     </ExternalLink>
-                    <ExternalLink href={liveSiteLink}>
+                    <ExternalLink href={live}>
                         <UilExternalLinkAlt />
                     </ExternalLink>
                 </ExternalButtonsContainer>
             </ProjectTopBar>
-            <Image src={imageUrl} alt="hi" />
+            <Image src={image} alt="hi" />
             <ProjectDescription>
                 {description}
             </ProjectDescription>
