@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ContactMe from './components/ContactMe';
+// import ContactMe from './components/ContactMe';
 import Introduction from './components/Introduction';
 import Projects from './components/Projects';
 import Signature from './components/Signature';
