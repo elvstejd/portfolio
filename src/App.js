@@ -8,9 +8,12 @@ import Header from './components/Header';
 
 const Main = styled.main`
   padding: 0 2rem;
-  padding-top: 5rem;
   max-width: 56rem;
   margin: 0 auto;
+
+  @media (min-width: 1024px) {
+      padding-top: 5rem;
+    }
 `;
 
 function App() {
