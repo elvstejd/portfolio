@@ -33,6 +33,7 @@ function Projects() {
             <ProjectsGridContainer>
                 {projects.map(({ name, description, imageUrl, githubLink, liveSiteLink }) => (
                     <ProjectCard
+                        key={name}
                         name={name}
                         description={description}
                         imageUrl={imageUrl}
