@@ -23,7 +23,9 @@ const projects = [
 
 const ProjectsGridContainer = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    @media (min-width: 425px) {
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    }
     gap: 2rem;
 `;
 
