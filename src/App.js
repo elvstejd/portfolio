@@ -4,7 +4,7 @@ import Introduction from './components/Introduction';
 import Projects from './components/Projects';
 import Signature from './components/Signature';
 import Skills from './components/Skills';
-import Header from './components/Header';
+// import Header from './components/Header';
 
 const Main = styled.main`
   padding: 0 2rem;
@@ -12,14 +12,14 @@ const Main = styled.main`
   margin: 0 auto;
 
   @media (min-width: 1024px) {
-      padding-top: 5rem;
+      padding-top: 3rem;
     }
 `;
 
 function App() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <Main>
         <Introduction />
         <Skills />
