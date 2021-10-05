@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { UilGithub, UilAt } from '@iconscout/react-unicons';
+import { UilGithub/*, UilAt */ } from '@iconscout/react-unicons';
 import DecoderEffect from './DecoderEffect';
 
 const HiText = styled.div`
@@ -64,10 +64,10 @@ function Introduction() {
                     <UilGithub />
                     <span>GitHub</span>
                 </Social>
-                <Social href="mailto:elvistejeda0910@gmail.com">
+                {/* <Social>
                     <UilAt />
                     <span>Email</span>
-                </Social>
+                </Social> */}
             </SocialsContainer>
         </div>
     )
