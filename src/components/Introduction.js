@@ -17,7 +17,7 @@ const NameAndTitle = styled.h1`
 
 const AboutMe = styled.p`
     font-family: var(--font-family-sans);
-    font-weight: 600;
+    font-weight: 500;
     font-size: var(--text-md);
     color: var(--secondary-600);
     margin-bottom: 1rem;
@@ -34,6 +34,8 @@ const Social = styled.div`
     font-size: var(--text-sm);
     color: var(--secondary-600);
     margin-right: 1rem;
+    transition: color .2s ease;
+    cursor: pointer;
     span {
         margin-left: .4rem;
     }
@@ -41,6 +43,10 @@ const Social = styled.div`
     svg {
         width: var(--text-sm);
         width: var(--text-sm);
+    }
+
+    &:hover {
+        color: var(--secondary-500);
     }
 `;
 
