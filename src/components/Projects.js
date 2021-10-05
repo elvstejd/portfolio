@@ -1,20 +1,20 @@
 import { SectionTitle } from "../styles/shared/SectionTitle";
 import ProjectCard from "./ProjectCard";
 import styled from "styled-components";
-import project1Image from '../images/pftcalc-screencap.png';
-import project2Image from '../images/timetask-screencap.png';
+import project1Image from '../images/timetask-screencap.png';
+import project2Image from '../images/pftcalc-screencap.png';
 
 const projects = [
     {
         name: "TimeTask",
-        description: "Lorem ipsum dolor sit amet is the beggining of the most common lorem ipsum text which is a placeholder in design compositions.",
+        description: "To-do app mixed with a timer. Made with <skill>ReactJS</skill>, <skill>Express.JS</skill> for the API and <skill>MongoDB</skill> as the database.",
         image: project1Image,
         github: "https://github.com/elvstejd/timetask",
         live: "https://timetask.netlify.app/"
     },
     {
         name: "Crypto Profit Calculator",
-        description: "Lorem ipsum dolor sit amet is the beggining of the most common lorem ipsum text which is a placeholder in design compositions.",
+        description: "Simple tool to calculate your cryptocurrency investment profits. Featuring <skill>ReactJS</skill>, <skill>Express.js</skill> and <skill>Python</skill> web scraping.",
         image: project2Image,
         github: "",
         live: ""

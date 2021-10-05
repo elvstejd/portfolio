@@ -60,9 +60,14 @@ const ProjectDescription = styled.p`
     color: var(--secondary-600);
     font-family: var(--font-family-sans);
     font-weight: 500;
-    line-height: 1.3rem;
+    line-height: 1.3;
     font-size: var(--text-md);
     padding: 1.4rem 1rem;
+
+    skill {
+        color: var(--accent-500);
+        font-family: var(--font-family-mono);
+    }
 `;
 
 
@@ -84,9 +89,8 @@ function ProjectCard({ name, description, image, github, live }) {
                 </ExternalButtonsContainer>
             </ProjectTopBar>
             <Image src={image} alt="hi" />
-            <ProjectDescription>
-                {description}
-            </ProjectDescription>
+            {/* Improper use of the innerHTML can open me up to a cross-site scripting (XSS) attack */}
+            <ProjectDescription dangerouslySetInnerHTML={{ __html: description }} />
         </CardContainer>
     )
 }
