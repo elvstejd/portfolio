@@ -80,12 +80,16 @@ function ProjectCard({ name, description, image, github, live }) {
                     <span>{name}</span>
                 </ProjectName>
                 <ExternalButtonsContainer>
-                    <ExternalLink href={github}>
-                        <UilGithubAlt />
-                    </ExternalLink>
-                    <ExternalLink href={live}>
-                        <UilExternalLinkAlt />
-                    </ExternalLink>
+                    {github && (
+                        <ExternalLink href={github}>
+                            <UilGithubAlt />
+                        </ExternalLink>
+                    )}
+                    {live && (
+                        <ExternalLink href={live}>
+                            <UilExternalLinkAlt />
+                        </ExternalLink>
+                    )}
                 </ExternalButtonsContainer>
             </ProjectTopBar>
             <Image src={image} alt="hi" />
