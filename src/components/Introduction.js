@@ -28,7 +28,7 @@ const SocialsContainer = styled.div`
     margin-bottom: 3rem;
 `;
 
-const Social = styled.div`
+const Social = styled.a`
     display: flex;
     align-items: center;
     font-size: var(--text-sm);
@@ -36,6 +36,7 @@ const Social = styled.div`
     margin-right: 1rem;
     transition: color .2s ease;
     cursor: pointer;
+    text-decoration: none;
     span {
         margin-left: .4rem;
     }
@@ -59,11 +60,11 @@ function Introduction() {
             </NameAndTitle>
             <AboutMe>At any given moment you can find me either learning or building apps. Always open for discussion or  collaboration. </AboutMe>
             <SocialsContainer>
-                <Social>
+                <Social href="https://github.com/elvstejd" target="_blank">
                     <UilGithub />
                     <span>GitHub</span>
                 </Social>
-                <Social>
+                <Social href="mailto:elvistejeda0910@gmail.com">
                     <UilAt />
                     <span>Email</span>
                 </Social>
