@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { UilGithub, UilAt } from '@iconscout/react-unicons';
+import DecoderEffect from './DecoderEffect';
 
 const HiText = styled.div`
     margin-top: 3rem;
@@ -53,7 +54,9 @@ function Introduction() {
     return (
         <div>
             <HiText>Hi, I'm</HiText>
-            <NameAndTitle>Elvis Tejeda, Software Engineer</NameAndTitle>
+            <NameAndTitle>
+                <DecoderEffect>Elvis Tejeda, Software Engineer</DecoderEffect>
+            </NameAndTitle>
             <AboutMe>At any given moment you can find me either learning or building apps. Always open for discussion or  collaboration. </AboutMe>
             <SocialsContainer>
                 <Social>
