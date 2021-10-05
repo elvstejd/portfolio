@@ -6,16 +6,16 @@ const projects = [
     {
         name: "TimeTask",
         description: "Lorem ipsum dolor sit amet is the beggining of the most common lorem ipsum text which is a placeholder in design compositions.",
-        imageUrl: "http://localhost:3001/timetask-screencap.png",
-        githubLink: "link",
-        liveSiteLink: "link2"
+        image: "http://localhost:3001/timetask-screencap.png",
+        github: "https://github.com/elvstejd/timetask",
+        live: "https://timetask.netlify.app/"
     },
     {
         name: "Crypto Profit Calculator",
         description: "Lorem ipsum dolor sit amet is the beggining of the most common lorem ipsum text which is a placeholder in design compositions.",
-        imageUrl: "http://localhost:3001/pftcalc-screencap.png",
-        githubLink: "link",
-        liveSiteLink: "link2"
+        image: "http://localhost:3001/pftcalc-screencap.png",
+        github: "",
+        live: ""
     },
 ];
 
@@ -31,14 +31,14 @@ function Projects() {
         <div>
             <SectionTitle><span>/</span>projects</SectionTitle>
             <ProjectsGridContainer>
-                {projects.map(({ name, description, imageUrl, githubLink, liveSiteLink }) => (
+                {projects.map(({ name, description, image, github, live }) => (
                     <ProjectCard
                         key={name}
                         name={name}
                         description={description}
-                        imageUrl={imageUrl}
-                        githubLink={githubLink}
-                        liveSiteLink={liveSiteLink}
+                        image={image}
+                        github={github}
+                        live={live}
                     />
                 ))}
             </ProjectsGridContainer>
