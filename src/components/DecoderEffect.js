@@ -1,4 +1,18 @@
 import { useState, useEffect, useRef } from "react";
+import styled from "styled-components";
+
+const RandomChars = styled.span`
+    text-shadow: var(--text-shadow-glow);
+    color: var(--accent-500);
+`;
+
+const GhostChars = styled.span`
+    opacity: 0.4;
+`;
+
+const WordSpan = styled.span`
+    display: inline-block;
+`;
 
 function generateRandomChars(amount, lastAnchorCharacter) {
     if (amount === 1 && lastAnchorCharacter)
@@ -49,14 +63,13 @@ function DecoderEffectUnit({ children, leadIn }) {
     const randomCharacters = useRef();
     const lastAnchorCharacter = useRef();
     const count = useRef(0);
-
     const interval = useRef();
 
     useEffect(() => {
         ghostwords.current.textContent = generateGhostFiller(0, children.trim());
         setTimeout(() => {
-            interval.current = setInterval(update, 1000);
-        }, 1000); // set to 0 seconds
+            interval.current = setInterval(update, 80);
+        }, 1000);
         return () => clearInterval(interval.current);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -120,11 +133,11 @@ function DecoderEffectUnit({ children, leadIn }) {
     }
 
     return (
-        <span style={{ display: 'inline-block' }}>
+        <WordSpan>
             <span ref={cleanwords}></span>
-            <span className="glow" ref={randomCharacters}></span>
-            <span ref={ghostwords} style={{ opacity: 0.4 }}></span>
-        </span>
+            <RandomChars ref={randomCharacters}></RandomChars>
+            <GhostChars ref={ghostwords}></GhostChars>
+        </WordSpan>
     );
 }
 
@@ -139,7 +152,7 @@ function DecoderEffect({ children, leadIn }) {
     return (
         arraySentence.map((word, index) => (
             <span key={index}>
-                <DecoderEffectUnit leadIn={leadIn}>{word}</DecoderEffectUnit>
+                <DecoderEffectUnit leadIn={leadIn || 3}>{word}</DecoderEffectUnit>
                 {" "}
             </span>
         ))
